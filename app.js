@@ -1,4 +1,4 @@
-const CLIENT_ID = "PASTE_YOUR_CLIENT_ID_HERE";
+const CLIENT_ID = "743039404353-m44i1gol8jq6kso2lr11urbeskt27va4.apps.googleusercontent.com";
 const SCOPE = "https://www.googleapis.com/auth/tasks";
 
 let accessToken = null;
