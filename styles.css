@@ -1,0 +1,104 @@
+:root {
+  --border: #e6e6e6;
+  --text: #111;
+  --muted: #666;
+  --bg: #fff;
+  --card: #fff;
+  --shadow: 0 10px 30px rgba(0,0,0,.06);
+  --radius: 14px;
+}
+
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+}
+
+.header {
+  max-width: 1100px;
+  margin: 24px auto 0;
+  padding: 0 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.title { font-size: 22px; font-weight: 750; }
+.status { margin-top: 4px; color: var(--muted); font-size: 14px; }
+
+.actions { display: flex; gap: 10px; flex-wrap: wrap; }
+button {
+  border: 1px solid var(--border);
+  background: #fafafa;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+button:disabled { opacity: .55; cursor: not-allowed; }
+
+.grid {
+  max-width: 1100px;
+  margin: 18px auto 40px;
+  padding: 0 16px;
+  display: grid;
+  grid-template-columns: 1.4fr .9fr;
+  gap: 16px;
+}
+@media (max-width: 900px) {
+  .grid { grid-template-columns: 1fr; }
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 14px;
+  box-shadow: var(--shadow);
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.label { font-weight: 700; }
+.muted { color: var(--muted); font-size: 14px; line-height: 1.4; }
+
+select, input {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  background: #fff;
+}
+select { min-width: 220px; }
+.addRow { margin-top: 12px; }
+.addRow input { flex: 1; }
+
+.tasks { margin-top: 14px; }
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 10px 0;
+  border-top: 1px solid #f0f0f0;
+}
+.taskLeft {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+.taskTitle {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.taskTitle.done { color: #888; text-decoration: line-through; }
+.taskBtns { display: flex; gap: 8px; }
+.small { padding: 8px 10px; border-radius: 10px; }

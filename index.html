@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tasks Dashboard</title>
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div>
+      <div class="title">Tasks</div>
+      <div class="status" id="status">Not signed in</div>
+    </div>
+    <div class="actions">
+      <button id="btnSignIn">Sign in</button>
+      <button id="btnSignOut" disabled>Sign out</button>
+      <button id="btnRefresh" disabled>Refresh</button>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <div class="row">
+        <div class="label">Task list</div>
+        <select id="taskListSelect" disabled></select>
+      </div>
+
+      <div class="row addRow">
+        <input id="newTitle" placeholder="New task title" />
+        <button id="btnAdd" disabled>Add</button>
+      </div>
+
+      <div id="tasks" class="tasks"></div>
+    </section>
+
+    <section class="card">
+      <div class="label">Quick</div>
+      <div class="muted">Ideas: show today/overdue filters, due date picker, multiple lists, calendar events panel.</div>
+    </section>
+  </main>
+
+  <script src="./app.js"></script>
+</body>
+</html>
